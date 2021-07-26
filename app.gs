@@ -2,7 +2,7 @@ function doGet(e) {
 
 	var params = e.parameter;
 
-	var SpreadSheet = SpreadsheetApp.openById("YOUR_SPREADSHEET_URL");
+	var SpreadSheet = SpreadsheetApp.openById("https://docs.google.com/forms/d/e/1FAIpQLSdZgeiV4QAmzspWK9EbmXmdGIqKfLENWCNC8MoNwhtdiRhoow/viewform?usp=sf_link");
 	var Sheet = SpreadSheet.getSheets()[0];
 	var LastRow = Sheet.getLastRow();
 
