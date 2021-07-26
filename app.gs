@@ -2,7 +2,7 @@ function doGet(e) {
 
 	var params = e.parameter;
 
-	var SpreadSheet = SpreadsheetApp.openById("https://docs.google.com/forms/d/e/1FAIpQLSdZgeiV4QAmzspWK9EbmXmdGIqKfLENWCNC8MoNwhtdiRhoow/viewform?usp=sf_link");
+	var SpreadSheet = SpreadsheetApp.openById("https://docs.google.com/forms/d/1EVTV5PztYq_gSuyAz3AsAeBBXXqtKbeZTvA3K4kB50U/edit#responses");
 	var Sheet = SpreadSheet.getSheets()[0];
 	var LastRow = Sheet.getLastRow();
 
