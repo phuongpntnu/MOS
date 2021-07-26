@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>語者判別實驗表單 1</title>
+    <title>Biểu mẫu thử nghiệm phân biệt người nói 1</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
@@ -13,22 +13,22 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             
-    <h1 class="display-4">語者判別實驗</h1>
-    <p class="lead">判斷兩份語音是否出自同一個人</p>
+    <h1 class="display-4">Thử nghiệm phân biệt người nói</h1>
+    <p class="lead">Xác định xem hai giọng nói có phải là của cùng một người hay không</p>
     <hr class="my-4">
     <p>
-        感謝您參與本次實驗！
+        Cảm ơn bạn đã tham gia thử nghiệm này!
     </p>
     <p>
-        在這個實驗中，我們使用電腦合成及轉換人類語音。每一題都有兩個音檔，請使用耳機聽完後，根據兩個音檔的語者相似度作答（僅考慮說話者的音色，不須考慮語句內容）。
+       Trong thí nghiệm này, chúng tôi sử dụng máy tính tổng hợp và chuyển đổi giọng nói của con người. Mỗi câu hỏi có hai tệp âm thanh, sau khi nghe bằng tai nghe, hãy trả lời theo mức độ giống nhau của người nói của hai tệp âm thanh (chỉ xét giọng nói của người nói, không xét nội dung của câu)。
     </p>
     <p>
-        評分標準為：
+        Tiêu chuẩn chấm điểm là：
         <ul>
-            <li>確定是同一個語者 (same, absolutely sure)</li>
-            <li>不大確定，但傾向認為是同一個語者 (same, not sure)</li>
-            <li>不大確定，但傾向認為是不同語者 (different, not sure)</li>
-            <li>確定是不同語者 (different, absolutely sure)</li>
+            <li>Chắc chắn là cùng một người nói (same, absolutely sure)</li>
+            <li>Không chắc chắn, nhưng có xu hướng nghĩ rằng họ là cùng một người nói (same, not sure)</li>
+            <li>Không chắc chắn, nhưng có xu hướng nghĩ rằng đó là một người nói ngôn ngữ khác (different, not sure)</li>
+            <li>Chắc chắn là một người nói khác (different, absolutely sure)</li>
         </ul>
     </p>
 
@@ -38,19 +38,19 @@
     <div class="container" id="form_container">
         <form id="theForm" action="http://localhost:8888" method="GET" onsubmit="return preventRepeatedSubmission();">
             <div class="form-group">
-                <label for="name">姓名：</label>
+                <label for="name">Tên：</label>
                 <input class="form-control" type="text" inputmode="text" name="name" required>
-                <small class="form-text text-muted">必填*</small>
+                <small class="form-text text-muted">Cần thiết*</small>
             </div>
             <div class="form-group">
-                <label for="mail">電子郵件：</label>
+                <label for="mail">E-mail：</label>
                 <input class="form-control" type="text" inputmode="email" placeholder="account@example.com" name="mail">
-                <small class="form-text text-muted">如果中獎，我們將以電子郵件通知您</small>
+                <small class="form-text text-muted">Nếu bạn thắng, chúng tôi sẽ thông báo cho bạn qua email</small>
             </div>
             
     
         <div class="card form-group">
-            <div class="card-header">問題 1</div>
+            <div class="card-header">Vấn đề 1</div>
             <div class="card-body">
                 
                     <p>
@@ -67,25 +67,25 @@
                 
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="q1" id="q1_1" value="1" required>
-                    <label class="form-check-label" for="q1_1">確定是同一個語者 (same, absolutely sure)</label>
+                    <label class="form-check-label" for="q1_1">Chắc chắn là cùng một người nói (same, absolutely sure)</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="q1" id="q1_2" value="2" required>
-                    <label class="form-check-label" for="q1_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                    <label class="form-check-label" for="q1_2">Không chắc chắn, nhưng có xu hướng nghĩ rằng họ là cùng một người nói (same, not sure)</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="q1" id="q1_3" value="3" required>
-                    <label class="form-check-label" for="q1_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                    <label class="form-check-label" for="q1_3">Không chắc chắn, nhưng có xu hướng nghĩ rằng đó là một người nói ngôn ngữ khác (different, not sure)</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="q1" id="q1_4" value="4" required>
-                    <label class="form-check-label" for="q1_4">確定是不同語者 (different, absolutely sure)</label>
+                    <label class="form-check-label" for="q1_4">Chắc chắn là một người nói khác (different, absolutely sure)</label>
                 </div>
             </div>
         </div>
     
         <div class="card form-group">
-            <div class="card-header">問題 2</div>
+            <div class="card-header">Vấn đề 2</div>
             <div class="card-body">
                 
                     <p>
@@ -102,35 +102,35 @@
                 
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="q2" id="q2_1" value="1" required>
-                    <label class="form-check-label" for="q2_1">確定是同一個語者 (same, absolutely sure)</label>
+                    <label class="form-check-label" for="q2_1">Chắc chắn là cùng một người nói (same, absolutely sure)</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="q2" id="q2_2" value="2" required>
-                    <label class="form-check-label" for="q2_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                    <label class="form-check-label" for="q2_2">Không chắc chắn, nhưng có xu hướng nghĩ rằng họ là cùng một người nói (same, not sure)</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="q2" id="q2_3" value="3" required>
-                    <label class="form-check-label" for="q2_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                    <label class="form-check-label" for="q2_3">Không chắc chắn, nhưng có xu hướng nghĩ rằng đó là một người nói ngôn ngữ khác (different, not sure)</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="q2" id="q2_4" value="4" required>
-                    <label class="form-check-label" for="q2_4">確定是不同語者 (different, absolutely sure)</label>
+                    <label class="form-check-label" for="q2_4">Chắc chắn là một người nói khác (different, absolutely sure)</label>
                 </div>
             </div>
         </div>
     
 
             <input type="text" name="formid" value="1" hidden>
-            <input type="text" name="thank" value="再次謝謝您參與本次實驗！" hidden>
-            <input class="btn btn-info btn-lg" type="submit" value="提交結果" id="submitBtn">
+            <input type="text" name="thank" value="Cảm ơn bạn một lần nữa vì đã tham gia thử nghiệm này！" hidden>
+            <input class="btn btn-info btn-lg" type="submit" value="Gửi kết quả" id="submitBtn">
             <p class="text-muted">
-                <small>如果提交結果時發現繳不出去，請回頭檢查是否有填入姓名、是否每一題都有作答到，謝謝。</small>
+                <small>Nếu bạn thấy không trả được khi nộp kết quả vui lòng kiểm tra lại xem bạn đã điền tên mình chưa và đã trả lời được mọi câu hỏi chưa, xin cảm ơn。</small>
             </p>
         </form>
     </div>
 
     <div class="container" style="padding-top: 60px;">
-        <p class="text-center text-muted">&copy; 台大語音實驗室</p>
+        <p class="text-center text-muted">&copy; Phòng Thí nghiệm tiếng nói VAIS</p>
     </div>
 
     <script type="text/javascript">
