@@ -19,27 +19,27 @@
     <div class="container" id="form_container">
         <form id="theForm" action="{{ form_url }}" method="GET" onsubmit="return preventRepeatedSubmission();">
             <div class="form-group">
-                <label for="name">姓名：</label>
+                <label for="name">E-mail：</label>
                 <input class="form-control" type="text" inputmode="text" name="name" required>
-                <small class="form-text text-muted">必填*</small>
+                <small class="form-text text-muted">Cần thiết*</small>
             </div>
             <div class="form-group">
-                <label for="mail">電子郵件：</label>
+                <label for="mail">e-mail：</label>
                 <input class="form-control" type="text" inputmode="email" placeholder="account@example.com" name="mail">
-                <small class="form-text text-muted">如果中獎，我們將以電子郵件通知您</small>
+                <small class="form-text text-muted">Nếu bạn thắng, chúng tôi sẽ thông báo cho bạn qua email</small>
             </div>
             {% block form_questions %}{% endblock %}
             <input type="text" name="formid" value="{{ form_id }}" hidden>
-            <input type="text" name="thank" value="再次謝謝您參與本次實驗！" hidden>
-            <input class="btn btn-info btn-lg" type="submit" value="提交結果" id="submitBtn">
+            <input type="text" name="thank" value="Cảm ơn bạn một lần nữa vì đã tham gia thử nghiệm này！" hidden>
+            <input class="btn btn-info btn-lg" type="submit" value="Gửi kết quả" id="submitBtn">
             <p class="text-muted">
-                <small>如果提交結果時發現繳不出去，請回頭檢查是否有填入姓名、是否每一題都有作答到，謝謝。</small>
+                <small>Nếu bạn thấy mình không thanh toán được khi gửi kết quả, vui lòng kiểm tra lại xem bạn đã điền tên mình chưa và đã trả lời được mọi câu hỏi chưa. Xin cảm ơn謝。</small>
             </p>
         </form>
     </div>
 
     <div class="container" style="padding-top: 60px;">
-        <p class="text-center text-muted">&copy; 台大語音實驗室</p>
+        <p class="text-center text-muted">&copy; Phòng Thí nghiệm tiếng nói VAIS</p>
     </div>
 
     <script type="text/javascript">
