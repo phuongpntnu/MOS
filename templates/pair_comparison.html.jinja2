@@ -1,21 +1,21 @@
 {% extends "base.html.jinja2" %}
 {% block heading %}
-    <h1 class="display-4">語者判別實驗</h1>
-    <p class="lead">判斷兩份語音是否出自同一個人</p>
+    <h1 class="display-4">Thử nghiệm phân biệt người nói</h1>
+    <p class="lead">Xác định xem hai giọng nói có phải là của cùng một người hay không?</p>
     <hr class="my-4">
     <p>
-        感謝您參與本次實驗！
+        Cảm ơn bạn đã tham gia thử nghiệm này！
     </p>
     <p>
-        在這個實驗中，我們使用電腦合成及轉換人類語音。每一題都有兩個音檔，請使用耳機聽完後，根據兩個音檔的語者相似度作答（僅考慮說話者的音色，不須考慮語句內容）。
+        Trong thí nghiệm này, chúng tôi sử dụng máy tính tổng hợp và chuyển đổi giọng nói của con người. Mỗi câu hỏi có hai tệp âm thanh, sau khi nghe bằng tai nghe, hãy trả lời theo mức độ giống nhau của người nói của hai tệp âm thanh (chỉ xét giọng nói của người nói, không xét nội dung của câu)。
     </p>
     <p>
-        評分標準為：
+        Tiêu chuẩn chấm điểm là：
         <ul>
-            <li>確定是同一個語者 (same, absolutely sure)</li>
-            <li>不大確定，但傾向認為是同一個語者 (same, not sure)</li>
-            <li>不大確定，但傾向認為是不同語者 (different, not sure)</li>
-            <li>確定是不同語者 (different, absolutely sure)</li>
+            <li>Chắc chắn là cùng một người nói(same, absolutely sure)</li>
+            <li>Không chắc chắn, nhưng có xu hướng nghĩ rằng họ là cùng một người nói (same, not sure)</li>
+            <li>Không chắc chắn, nhưng có xu hướng nghĩ rằng đó là một người nói ngôn ngữ khác (different, not sure)</li>
+            <li>Chắc chắn là một người nói khác (different, absolutely sure)</li>
         </ul>
     </p>
 {% endblock %}
@@ -33,19 +33,19 @@
                 {% endfor %}
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_1" value="1" required>
-                    <label class="form-check-label" for="{{ question.name }}_1">確定是同一個語者 (same, absolutely sure)</label>
+                    <label class="form-check-label" for="{{ question.name }}_1">Chắc chắn là cùng một người nói (same, absolutely sure)</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_2" value="2" required>
-                    <label class="form-check-label" for="{{ question.name }}_2">不大確定，但傾向認為是同一個語者 (same, not sure)</label>
+                    <label class="form-check-label" for="{{ question.name }}_2">Không chắc chắn, nhưng có xu hướng nghĩ rằng họ là cùng một người nói (same, not sure)</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_3" value="3" required>
-                    <label class="form-check-label" for="{{ question.name }}_3">不大確定，但傾向認為是不同語者 (different, not sure)</label>
+                    <label class="form-check-label" for="{{ question.name }}_3">Không chắc chắn, nhưng có xu hướng nghĩ rằng đó là một người nói ngôn ngữ khác (different, not sure)</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_4" value="4" required>
-                    <label class="form-check-label" for="{{ question.name }}_4">確定是不同語者 (different, absolutely sure)</label>
+                    <label class="form-check-label" for="{{ question.name }}_4">Chắc chắn là một người nói khác (different, absolutely sure)</label>
                 </div>
             </div>
         </div>
